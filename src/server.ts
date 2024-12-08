@@ -3,7 +3,7 @@ import puppeteer from 'puppeteer';
 import cors from 'cors';
 
 const app = express();
-const PORT = 3000;
+const PORT = 5100;
 
 app.use(cors());
 
@@ -80,6 +80,7 @@ app.get('/population', async (req: Request, res: Response) => {
     }
 });
 
-app.listen(PORT, () => {
-    console.log(`Сервер запущен: http://localhost:${PORT}`);
+app.listen(PORT, '0.0.0.0', () => {
+    console.log(`Сервер запущен: http://0.0.0.0:${PORT}`);
 });
+
